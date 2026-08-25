@@ -1,0 +1,36 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Generated sources
+generated-sources/
+generated-test-sources/
+
+# Logs
+*.log
+
+# IDEs and editors
+.idea/
+*.iml
+/.vscode/
+.project
+.classpath
+.settings/
+out/
+
+# OS files
+.DS_Store
+
+# Environment
+.env
+
+# Ignore target folders in submodules
+**/target/
