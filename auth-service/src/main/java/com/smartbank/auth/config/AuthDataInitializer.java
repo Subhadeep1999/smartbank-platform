@@ -177,6 +177,14 @@ public class AuthDataInitializer {
                     "Deactivate customer"
             );
 
+            createPermission(
+                permissionRepository,
+                permissions,
+                "OUTBOX_REPLAY",
+                "Outbox Replay",
+                "Replay failed outbox events"
+            );
+
             /*
              * 4. Role → Permission mappings
              */
@@ -303,6 +311,11 @@ public class AuthDataInitializer {
                     rolePermissionRepository,
                     roles.get(RoleType.BRANCH_MANAGER),
                     permissions.get("CUSTOMER_DEACTIVATE")
+            );
+            assignPermission(
+                    rolePermissionRepository,
+                    roles.get(RoleType.BANK_ADMIN),
+                    permissions.get("OUTBOX_REPLAY")
             );
 
             // AUDITOR

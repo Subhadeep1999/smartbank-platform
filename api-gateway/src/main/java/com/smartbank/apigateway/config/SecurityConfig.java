@@ -107,6 +107,16 @@ public class SecurityConfig {
                         )
                         .hasAuthority("TRANSACTION_READ")
 
+                        // =========================
+                        // INTERNAL OUTBOX APIs
+                        // =========================
+                        
+                        .pathMatchers(
+                                HttpMethod.POST,
+                                "/api/v1/internal/outbox/**"
+                        )
+                        .hasAuthority("OUTBOX_REPLAY")
+
 
                         // =========================
                         // EVERYTHING ELSE
