@@ -31,6 +31,13 @@ out/
 
 # Environment
 .env
+.env.*
+!.env.example
+
+# Local Spring config overrides
+**/application-local.properties
+**/application-dev.properties
+**/application-prod.properties
 
 # Ignore target folders in submodules
 **/target/
